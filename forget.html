@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="forgot-form">
+        <div class="input">
+            <input type="email" id="forgot-email" placeholder="Enter your email" required />
+            <svg class="icon" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16v16H4z" fill="none" />
+                <path d="M4 4l8 8 8-8" stroke="currentColor" stroke-width="2" />
+            </svg>
+        </div>
+        <button type="submit" id="btn-forgot">Send Reset Link</button>
+    </form>
+    <div class="msg" id="forgot-msg"></div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"></script>
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>

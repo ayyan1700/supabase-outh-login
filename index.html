@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome back</h1>
+    <p class="subtitle">Sign in to continue</p>
+
+    <form id="email-login-form">
+      <div class="input">
+        <!-- mail icon -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none">
+          <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.5" opacity=".8" />
+          <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" opacity=".8" />
+        </svg>
+        <input id="email" type="email" placeholder="Email" required />
+      </div>
+
+      <div class="input">
+        <!-- lock icon -->
+        <svg class="icon" viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5" opacity=".8" />
+          <path d="M8 10V8a4 4 0 1 1 8 0v2" stroke="currentColor" stroke-width="1.5" opacity=".8" />
+        </svg>
+        <input id="password" type="password" placeholder="Password" required />
+      </div>
+
+      <div class="row">
+        <button type="submit" id="btn-login">Login</button>
+        <button type="button" id="btn-signup">Create account</button>
+      </div>
+      <div class="msg" id="ep-msg"></div>
+    </form>
+
+    <div id="forget-password" class="sep">Forget-password ?</div>
+
+    <div class="row">
+      <button id="btn-google">Continue with Google</button>
+      <button id="btn-github">GitHub</button>
+      <button id="btn-facebook">Facebook</button>
+      <button id="btn-logout">logout</button>
+    </div>
+    <div class="msg" id="oauth-msg"></div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+
+</html>

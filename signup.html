@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create account</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create your account</h1>
+    <p class="subtitle">Sign up with your details</p>
+
+    <form id="signup-form">
+      <!-- Name -->
+      <div class="input">
+        <svg class="icon" viewBox="0 0 24 24" fill="none">
+          <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+          <path d="M4 20a8 8 0 0 1 16 0" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+        </svg>
+        <input id="sign-name" type="text" placeholder="Full name" required />
+      </div>
+
+      <!-- Email -->
+      <div class="input">
+        <svg class="icon" viewBox="0 0 24 24" fill="none">
+          <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+          <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+        </svg>
+        <input id="sign-email" type="email" placeholder="Email" required />
+      </div>
+
+      <!-- Password -->
+      <div class="input">
+        <svg class="icon" viewBox="0 0 24 24" fill="none">
+          <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+          <path d="M8 10V8a4 4 0 1 1 8 0v2" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+        </svg>
+        <input id="sign-password" type="password" placeholder="Password" required />
+      </div>
+
+      <!-- Phone -->
+      <div class="input">
+        <svg class="icon" viewBox="0 0 24 24" fill="none">
+          <rect x="7" y="3" width="10" height="18" rx="2" stroke="currentColor" stroke-width="1.5" opacity=".85"/>
+          <circle cx="12" cy="17" r="1" fill="currentColor" opacity=".85"/>
+        </svg>
+         <input type="text" id="sign-phone" placeholder="Phone Number"  required />
+      </div>
+
+      <div class="row">
+        <button type="submit" id="btn-create">Create account</button>
+        <a href="#" id="back-to-login" style="flex:1; text-align:center; display:inline-block; padding:12px 14px; border:1px solid var(--primary); border-radius:12px; color:var(--primary); text-decoration:none;">Back to login</a>
+      </div>
+      <div class="msg" id="su-msg"></div>
+    </form>
+  </div>
+
+  <!-- Supabase UMD (global) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Your signup logic -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
